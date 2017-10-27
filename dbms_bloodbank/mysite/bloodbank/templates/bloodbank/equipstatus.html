@@ -1,0 +1,12 @@
+<h2>Equipment currently under usage at XYZ blood bank</h2>
+
+<table>
+<tr><td>Equipment Id</td><td>Description</td><td>Type</td><td>Quantity</td><td>Cost</td><td>Last Purchase Date</td></tr><br>
+{%for r in row %}
+	<tr>{%for i in r %}<td>{{i}}</td>{% endfor %}</tr>{% endfor %}
+</table>
+<br>
+<br>
+<a href='/bloodbank/adminlogin/'>See all admin priveleges</a>
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>

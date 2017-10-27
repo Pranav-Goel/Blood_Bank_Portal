@@ -1,0 +1,17 @@
+<h2>enter employee credentials</h2>
+<form action="/bloodbank/emplogauth/" method="post">
+{% csrf_token %}
+	Employee ID<br>
+	<input type="text" name="employee_ID"><br>
+	Password<br>
+	<input type="password" name="password"><br>
+	<input type="submit" value="Log In">
+</form>
+{% if emsg %}
+	<a ><p><strong>{{ emsg }} Try Again!</strong></p></a>
+{% endif %}
+{% if error %}
+	<a ><p><strong>{{ error }} Try Again!</strong></p></a>
+{% endif %}
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>

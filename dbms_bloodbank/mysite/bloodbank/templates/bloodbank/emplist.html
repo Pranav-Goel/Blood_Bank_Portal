@@ -1,0 +1,10 @@
+<h2>Registered Employees</h2>
+
+<table>
+<tr><td>Employee Id</td><td>Name</td><td>Age</td><td>Sex</td><td>Date of Joining</td><td>Salary</td><td>Contact Number</td><td>Email ID</td></tr><br>
+{%for r in row %}
+	<tr>{%for i in r %}<td>{{i}}</td>{% endfor %}</tr>{% endfor %}
+</table>
+
+<br><br>
+<a href='/bloodbank/adminlogin/'>See all admin priveleges</a>

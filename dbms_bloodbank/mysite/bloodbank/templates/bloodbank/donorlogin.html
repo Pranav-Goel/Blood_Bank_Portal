@@ -1,0 +1,17 @@
+<h2>Dear Donor, Please Enter Login Credentials</h2><br>
+<form action="/bloodbank/donorlogauth/" method="post">
+{% csrf_token %}
+	Donor ID<br>
+	<input type="text" name="donor_ID"><br>
+	Password<br>
+	<input type="password" name="password"><br>
+	<input type="submit" value="Log In">
+</form>
+{% if emsg %}
+	<a ><p><strong>{{ emsg }} Try Again!</strong></p></a>
+{% endif %}
+{% if error %}
+	<a ><p><strong>{{ error }} Try Again!</strong></p></a>
+{% endif %}
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>

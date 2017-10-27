@@ -1,0 +1,11 @@
+<h2>Log for Blood Group {{blood_group}}</h2>
+<br>
+<table>
+<tr><td>Donor ID</td><td>Date of last donation</td></tr><br>
+{%for r in row %}
+	<tr>{%for i in r %}<td>{{i}}</td>{% endfor %}</tr>{% endfor %}
+</table>
+<br>
+<a href='/bloodbank/adminlogin/'>See all admin priveleges</a>
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>
