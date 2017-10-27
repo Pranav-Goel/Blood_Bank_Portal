@@ -1,0 +1,19 @@
+<h1>Welcome Admin</h1>
+<br>
+<br><a href='/bloodbank/empnewsignup/'>Register New Employee</a><br>
+<br><a href='/bloodbank/emplist/'>Current XYZ Blood Bank Employees</a><br>
+<br><a href='/bloodbank/empupdate/'>Update Employee Info</a><br>
+<br><a href='/bloodbank/bbstatus/'>Check Blood Bank Inventory Status</a><br>
+<br><a href='/bloodbank/hist/'>XYZ Blood Bank History</a><br>
+<br><a href='/bloodbank/withdraw/'>Withdraw Blood Sample</a><br>
+<br><a href='/bloodbank/equipstatus/'>Equipment Information</a><br>
+
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>
+<br><br><br>
+{% if row %}
+	WARNING! The following blood groups are critically low in quantity:<br>
+	{% for i in row %}
+		{{i}}<br>
+	{% endfor %}
+{% endif %}

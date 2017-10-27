@@ -1,0 +1,43 @@
+<h1>Update Employee Information</h1>
+<br>
+<form action="/bloodbank/updateauth/" method="post">
+{% csrf_token %}
+    Employee ID:<br>
+    <select name="employee_ID">
+    {% for empid in row %}
+	<option value="{{empid}}">{{empid}}</option>
+    {% endfor %}
+    </select><br>
+    Name:<br>
+    <input type="text" name="name" required><br>
+    Age:<br>
+    <input type="number" name="age" required><br>
+    Salary:<br>
+    <input type="number" name="salary" required><br>
+    Contact:<br>
+    <input type="text" name="contact_no" required><br>
+    Email ID:<br>
+    <input type="text" name="email_id" required><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if ename %}
+	<a ><p><strong>{{ ename }}</strong></p></a>
+
+{% endif %}
+
+{% if eage %}
+	<a ><p><strong>{{ eage }}</strong></p></a>
+{% endif %}
+
+{% if esal %}
+	<a ><p><strong>{{ esal }}</strong></p></a>
+{% endif %}
+
+{% if eno %}
+	<a ><p><strong>{{ eno }}</strong></p></a>
+{% endif %}
+
+{% if emid %}
+	<a ><p><strong>{{ emid }}</strong></p></a>
+{% endif %}

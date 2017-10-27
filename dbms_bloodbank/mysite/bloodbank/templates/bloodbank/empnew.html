@@ -1,0 +1,13 @@
+<h2>Enter the special Admin password</h2>
+<br>
+<form action="/bloodbank/empnewauth/" method="post">
+{% csrf_token %}
+    <input type="password" name="password"><br>
+    <input type="submit" value="Submit">
+</form>
+
+{% if error %}
+	<br><a >{{ error }}. Try Again </a>
+{% endif %}
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>

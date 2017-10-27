@@ -1,0 +1,12 @@
+Your blood group is {{ blood_group }}.
+
+<form action="/bloodbank/donation/" method="post">
+{% csrf_token %}
+    Select quantity to donate:<br>
+    <select name="quantity">
+	<option value='0.50'>0.5</option>
+	<option value='1.00'>1.0</option>
+	<option value='2.00'>2.0</option>
+    </select><br>
+    <input type="submit" value="Donate!">
+</form>

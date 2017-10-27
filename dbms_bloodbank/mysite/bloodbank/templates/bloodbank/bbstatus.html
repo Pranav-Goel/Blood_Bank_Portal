@@ -1,0 +1,12 @@
+<h2>Current Blood Bank Status</h2>
+
+<table>
+<tr><td>Blood Group</td><td>Current Quantity</td></tr><br>
+{%for r in row %}
+	<tr>{%for i in r %}<td>{{i}}</td>{% endfor %}</tr>{% endfor %}
+</table>
+
+<br><br>
+<a href='/bloodbank/adminlogin/'>See all admin priveleges</a>
+<br><br>
+<a href='/bloodbank/home/'>HOME</a>
